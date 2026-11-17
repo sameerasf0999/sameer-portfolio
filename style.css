@@ -432,28 +432,80 @@ footer {
   width: 190px;
 }
  
-  const contactForm = document.getElementById("contactForm");
+  
+.contact-form-container {
+  max-width: 650px;
+  margin: 45px auto 10px;
+  padding: 30px;
+  background: #f5fbfa;
+  border: 1px solid #dcebe7;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(15, 60, 70, 0.07);
+  text-align: left;
+}
 
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
+.contact-form-container h3 {
+  text-align: center;
+  color: #07594f;
+  margin: 0 0 8px;
+}
 
-      const name = document.getElementById("visitorName").value.trim();
-      const email = document.getElementById("visitorEmail").value.trim();
-      const message = document.getElementById("visitorMessage").value.trim();
+.contact-form-container > p {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 25px;
+}
 
-      const subject = encodeURIComponent("Portfolio Contact Message");
-      const body = encodeURIComponent(
-        "Name: " + name +
-        "\nEmail: " + email +
-        "\n\nMessage:\n" + message
-      );
+.contact-form-container label {
+  display: block;
+  margin: 15px 0 6px;
+  color: #07594f;
+  font-weight: 600;
+}
 
-      const mailtoLink =
-        "mailto:sameerasifsameerasif999@gmail.com" +
-        "?subject=" + subject +
-        "&body=" + body;
+.contact-form-container input,
+.contact-form-container textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbded9;
+  border-radius: 9px;
+  font: inherit;
+  background: #ffffff;
+  outline: none;
+}
 
-      window.location.href = mailtoLink;
-    });
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+  border-color: #0d9488;
+  box-shadow: 0 0 0 3px rgba(13,148,136,0.12);
+}
+
+.contact-form-container textarea {
+  resize: vertical;
+}
+
+.send-button {
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: #087f70;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-button:hover {
+  background: #07594f;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .contact-form-container {
+    padding: 20px;
   }
+}
