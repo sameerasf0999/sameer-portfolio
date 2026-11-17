@@ -353,3 +353,81 @@ footer {
     font-size: 14px;
   }
 }
+   
+.contact-section {
+  background: #ffffff;
+  text-align: center;
+}
+
+.contact-intro {
+  max-width: 650px;
+  margin: 0 auto 35px;
+  color: #64748b;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.contact-card {
+  background: #f5fbfa;
+  border: 1px solid #dcebe7;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 22px rgba(15, 60, 70, 0.07);
+}
+
+.contact-icon {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.contact-card h3 {
+  color: #07594f;
+  margin: 8px 0;
+}
+
+.contact-card p {
+  color: #64748b;
+  margin-bottom: 18px;
+}
+
+.contact-card a,
+.phone-options summary {
+  display: inline-block;
+  background: #087f70;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.contact-card a:hover,
+.phone-options summary:hover {
+  background: #07594f;
+}
+
+.phone-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone-options summary {
+  list-style: none;
+}
+
+.phone-options summary::-webkit-details-marker {
+  display: none;
+}
+
+.phone-options a {
+  width: 190px;
+}
