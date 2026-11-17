@@ -43,4 +43,31 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+  
+  const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("visitorName").value.trim();
+      const email = document.getElementById("visitorEmail").value.trim();
+      const message = document.getElementById("visitorMessage").value.trim();
+
+      const subject = encodeURIComponent("Portfolio Contact Message");
+      const body = encodeURIComponent(
+        "Name: " + name +
+        "\nEmail: " + email +
+        "\n\nMessage:\n" + message
+      );
+
+      const mailtoLink =
+        "mailto:sameerasifsameerasif999@gmail.com" +
+        "?subject=" + subject +
+        "&body=" + body;
+
+      window.location.href = mailtoLink;
+    });
+  }
+
 });
